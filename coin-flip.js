@@ -9,6 +9,7 @@ console.log(num, typeof num);
 console.log(parseInt(num),typeof parseInt(num))
 function flipCoin(num){
   let output = ["heads","tails"];
+  let imgUrl = ["img/heads.png","img/tails.png"];
   num = parseInt(num);
   if(isNaN(num)){
     window.alert("Please, choose a numeric value.")
