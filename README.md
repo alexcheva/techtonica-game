@@ -1,2 +1,2 @@
 # Simple JS + HTML Game
-##techtonica game assignment
+## Techtonica game assignment
