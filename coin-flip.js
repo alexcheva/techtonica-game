@@ -12,7 +12,9 @@ function flipCoin(num){
   let imgUrl = ["img/heads.png","img/tails.png"];
   num = parseInt(num);
   if(isNaN(num)){
-    window.alert("Please, choose a numeric value.")
+    window.alert("Please, choose a numeric value.");
+    num = window.prompt("How many coins would you like to flip?");
+    flipCoin(num);
   }else{
     
     for(let i=1; i<=num; i++){
