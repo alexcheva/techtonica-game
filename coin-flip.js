@@ -12,23 +12,21 @@ const color = `rgb(${Math.floor(Math.random()*255)} ${Math.floor(Math.random()*2
 
 document.getElementById("coinForm").onsubmit = () => {
   let number = document.getElementById("numCoins").value;
-  if(number.value !== undefined){
-    result.innerText = "";
-    button.value = "Flip Again.";
-    button.setAttribute("class", "orange");
-    
-    let h2 = document.createElement("h2");
-    h2.innerText = "Your Results:";
-    result.appendChild(h2);
   
-    for(let i=1; i<=number; i++){
-      let randomNum = Math.floor(Math.random()*2);
-      let p = document.createElement("p");
-      p.innerHTML = `<span style="color:${color}">Coin ${i}</span> lands on ${output[randomNum]}.`;
-      result.appendChild(p);
-    }
-  }
+  result.innerText = "";
+  button.value = "Flip Again.";
+  button.setAttribute("class", "orange");
 
+  let h2 = document.createElement("h2");
+  h2.innerText = "Your Results:";
+  result.appendChild(h2);
+
+  for(let i=1; i<=number; i++){
+    let randomNum = Math.floor(Math.random()*2);
+    let p = document.createElement("p");
+    p.innerHTML = `<span style="color:${color}">Coin ${i}</span> lands on ${output[randomNum]}.`;
+    result.appendChild(p);
+  }
 };
 
 // function returnResults() {
