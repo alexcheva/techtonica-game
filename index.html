@@ -6,6 +6,16 @@
   <title>Coin Flip Game</title>
 </head>
 <body>
+  <main class="wrapper">
+  <form id="coinForm" action="JavaScript:void(0)">
+    <label for="coins">How many coins do you want to flip?</label>
+    <input type="number" id="coins" name="coins"  min="1" max="100">
+    <input type="submit" id="submitButton" value="Submit">
+  </form>
+  <div id="result">
+
+  </div>
+  </main>
   <script src="coin-flip.js"></script>
 </body>
 </html>
