@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Coiny&family=Roboto&display=swap');
 body{
   font-family: 'Roboto', sans-serif;
+  background-color: cornsilk;
 }
 h1, h2 {
   font-family: 'Coiny', cursive;
@@ -12,4 +13,7 @@ h1, h2 {
 }
 .tails{
   color: blue;
+}
+.orange{
+  background-color: orange;
 }
