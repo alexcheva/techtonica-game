@@ -22,14 +22,19 @@
 //   }
 // }
 // flipCoin(num);
-let output = ["heads","tails"];
+let output = ["<span class='heads'>heads</span>","<span class='tails'>tails</span>"];
+let imgUrl = ["img/heads.png","img/tails.png"];
 let button = document.getElementById("submitButton");
 let result = document.getElementById("result");
-
+let color = `rgb(${Math.floor(Math.random()*255)} ${Math.floor(Math.random()*255)} ${Math.floor(Math.random()*255)})`;
+// console.log(color);
+// function randomColor(){
+//   return `rgb(${Math.floor(Math.random()*255)} ${Math.floor(Math.random()*255)} ${Math.floor(Math.random()*255)})`;
+// }
 document.getElementById("coinForm").onsubmit = () => {
   let number = document.getElementById("coins").value;
   result.innerText = "";
-  button.value = "Resubmit";
+  button.value = "Flip Again.";
   
   let h2 = document.createElement("h2");
   h2.innerText = "Your Results:";
@@ -38,8 +43,9 @@ document.getElementById("coinForm").onsubmit = () => {
   for(let i=1; i<=number; i++){
     let randomNum = Math.floor(Math.random()*2);
     let p = document.createElement("p");
-    let text = document.createTextNode(`Coin ${i} lands on ${output[randomNum]}.`);
-    p.appendChild(text);
+    p.innerHTML = `<span style="color:${color}">Coin ${i}</span> lands on ${output[randomNum]}.`;
+    //let text = document.createTextNode(`<span color="${color}">Coin ${i}</span> lands on ${output[randomNum]}.`);
+   // p.appendChild(text);
     result.appendChild(p);
   }
 };

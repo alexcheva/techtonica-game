@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Coiny&family=Roboto&display=swap');
+body{
+  font-family: 'Roboto', sans-serif;
+}
+h1, h2 {
+  font-family: 'Coiny', cursive;
+  padding-top: 20px;
+
+}
+.heads{
+  color: red;
+}
+.tails{
+  color: blue;
+}
