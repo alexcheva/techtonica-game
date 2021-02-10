@@ -17,3 +17,19 @@ h1, h2 {
 .orange{
   background-color: orange;
 }
+.grid-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: auto auto auto auto;
+  margin-bottom: 30px;
+}
+
+.grid-container > div {
+  background-color: white;
+  text-align: center;
+  padding: 20px 0 5px 0;
+  border: dimgray solid 1px;
+}
+.grid-container > div > img {
+  width: 50%;
+}
