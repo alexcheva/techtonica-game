@@ -1,10 +1,7 @@
 // Coin Flip
 // Make a web page where you can flip a coin and it comes up heads 50% of times and tails 50% of times.
-//const output = ["<span class='heads'>heads</span>","<span class='tails'>tails</span>"];
-//const imgUrl = ["img/heads.png","img/tails.png"];
 
 const button = document.getElementById("submitButton");
-// const gridContainer = document.querySelector(".gridContainer");
 const result = document.getElementById("result");
 const color = `rgb(${Math.floor(Math.random()*255)} ${Math.floor(Math.random()*255)} ${Math.floor(Math.random()*255)})`;
 
@@ -26,16 +23,16 @@ document.getElementById("coinForm").onsubmit = () => {
   
   result.innerText = "";
   button.value = "Flip Again.";
-  button.setAttribute("class", "orange");
+  button.classList.add("orange");
 
   let h2 = document.createElement("h2");
   h2.innerText = "Your Results:";
 
   let gridContainer = document.createElement("div");
-  gridContainer.setAttribute("class", "grid-container");
+  gridContainer.classList.add("grid-container");
+  
   result.appendChild(h2);
   result.appendChild(gridContainer);
-
 
   for(let i=1; i<=number; i++){
     let randomNum = Math.floor(Math.random()*2);
