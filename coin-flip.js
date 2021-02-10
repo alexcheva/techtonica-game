@@ -30,7 +30,7 @@ document.getElementById("coinForm").onsubmit = () => {
 
   let gridContainer = document.createElement("div");
   gridContainer.classList.add("grid-container");
-  
+
   result.appendChild(h2);
   result.appendChild(gridContainer);
 
@@ -43,8 +43,8 @@ document.getElementById("coinForm").onsubmit = () => {
     h5.setAttribute("style", `color:${color}`);
 
     let img = document.createElement("img");
-    img.setAttribute("src", output[randomNum].imgUrl);
-    img.setAttribute("alt", output[randomNum].name);
+    img.src = output[randomNum].imgUrl;
+    img.alt = output[randomNum].name;
 
     let p = document.createElement("p");
     p.innerHTML = `lands on ${output[randomNum].span}.`;
